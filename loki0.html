@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="input-box">
+      <label for="x">Enter the value of x:</label>
+      <input type="number" id="x" placeholder="Enter x">
+    </div>
+    <div class="input-box">
+      <label for="y">Enter the value of y:</label>
+      <input type="number" id="y" placeholder="Enter y">
+    </div>
+    <div class="input-box">
+      <label for="result">Result:</label>
+      <input type="text" id="result" disabled placeholder="Result">
+    </div>
+    <div class="buttons">
+      <button onclick="calculate('add')">Addition (x + y)</button>
+      <button onclick="calculate('subtract')">Subtraction (x - y)</button>
+      <button onclick="calculate('multiply')">Multiplication (x * y)</button>
+      <button onclick="calculate('divide')">Division (x / y)</button>
+    </div>
+  </div>
+
+  <script src="loki1.js"></script>
+</body>
+</html>
