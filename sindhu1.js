@@ -1,11 +1,9 @@
 function calculate(operation) {
-    // Get values of x and y
+    
     const x = parseFloat(document.getElementById("x").value);
     const y = parseFloat(document.getElementById("y").value);
     
-    let result;
-    
-    // Perform the appropriate operation
+    let result
     switch(operation) {
       case 'add':
         result = x + y;
@@ -27,7 +25,6 @@ function calculate(operation) {
         result = "Invalid operation";
     }
   
-    // Display the result
     document.getElementById("result").value = result;
   }
   
