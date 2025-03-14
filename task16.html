@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Work Display</title>
+        <style>
+            body {
+    
+    
+    font-family: Arial, sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+ #navigation {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#navigation a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#work-display {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+        </style>
+    </head>
+    <body>
+      
+        <h1>Class Works</h1>
+        <div id="navigation">
+        </div>
+        <div id="work-display">
+           
+        </div>
+        
+<script >
+ const works = {
+    "task1": {"title": "Project 1", "url": "file:///C:/Users/USER/AppData/Local/Temp/8db59157-81ad-44b4-9087-546c87719e5d_task_json_iframe.zip.e5d/task_json_iframe/works/task1/index.html"},
+    "task2": {"title": "Project 2", "url": "file:///C:/Users/USER/AppData/Local/Temp/4a01893f-7296-451d-9e94-8b6014a2ee85_task_json_iframe.zip.e85/task_json_iframe/works/task2/index.html"},
+    "task3": {"title": "Project 3", "url": "file:///C:/Users/USER/AppData/Local/Temp/6d55bf24-60a3-46e7-85db-f11efe5faac3_task_json_iframe.zip.ac3/task_json_iframe/works/task3/index.html"},
+};
+
+function loadWork(task) {
+    const workDisplay = document.getElementById('work-display');
+    const iframe = document.createElement('iframe');
+    iframe.src = works[task].url;
+    iframe.width = '100%';
+    iframe.height = '500px';
+    workDisplay.innerHTML = ''; // Clear previous content
+    workDisplay.appendChild(iframe);
+}
+
+const navigation = document.getElementById('navigation');
+Object.keys(works).forEach((taskKey) => {
+    const link = document.createElement('a');
+    link.href = "#";
+    link.textContent = works[taskKey].title;
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+        loadWork(taskKey);
+    });
+    navigation.appendChild(link);
+});
+
+        </script>
+    </body>
+</html>
