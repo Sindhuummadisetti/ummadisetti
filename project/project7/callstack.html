@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <input type="text" id="taskName" placeholder="Enter task name">
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="undoTask()">Undo Task</button>
+    
+    <h3>Process Line:</h3>
+    <p id="tasks">No tasks yet.</p>
+
+    <script>
+        let taskStack = [];
+
+        function addTask() {
+            const taskName = document.getElementById('taskName').value;
+            if (taskName) {
+                taskStack.push(taskName);
+                document.getElementById('taskName').value = ''; // Clear input field
+                updateTasks();
+            }
+        }
+
+        function undoTask() {
+            taskStack.pop();
+            updateTasks();
+        }
+
+        function updateTasks() {
+            document.getElementById('tasks').innerText = taskStack.length > 0 ?
+                taskStack.join(', ') : 'No tasks yet.';
+        }
+    </script>
+</body>
+</html>
