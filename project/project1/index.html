@@ -1,57 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Dashboard and Page</title>
   <style>
-   
+    /* General Container Styling */
     .container {
-      width: 700px;
+      width: 900px;
       margin: 0 auto;
       padding: 10px;
-     
+      border: 1px solid #ccc;
     }
+
+    /* Header Styling */
     h1 {
       text-align: center;
-      color:white;
     }
+
+    /* Dashboard Header */
     .dashboard-header {
-      background-color:grey;
+      background-color: grey;
       padding: 15px;
       margin-bottom: 20px;
     }
+
+    /* Text Block Styling */
     .text {
-      background-color:black;
+      background-color: black;
+      color: white;
       padding: 20px;
       height: 300px;
     }
-    .button {
+
+    /* Button Styling */
+    .button, .clickbutton {
       display: block;
-      width: 200px;
+      width: 250px;
       margin: 20px auto;
       padding: 10px;
-      background-color:blueviolet;
-      color:black;
       text-align: center;
-    
+      background-color: blueviolet;
+      color: black;
+      text-decoration: none;
     }
-    p{
+
+    .clickbutton {
+      background-color: green;
+    }
+
+    /* Styling for iframe container */
+    .iframe-container {
+      margin-top: 20px;
+      height: 500px;
+      border: 1px solid #ccc;
       text-align: center;
-      color:black;
+    }
+
+    /* Paragraph Styling */
+    p {
+      text-align: center;
+      color: black;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Dashboard Section -->
     <div class="dashboard-header">
       <h1>Welcome to the Custom Dashboard</h1>
       <p>It doesn't have any functionalities yet!</p>
-   
     </div>
 
     <div class="text">
-      </div>
+      <!-- Text Block -->
+    </div>
 
     <a href="indexpage.html" class="button">Click here to return to Home</a>
+
+    <!-- Custom Designed Page Section -->
+    <h1>Welcome to My Custom Designed Page!</h1>
+
+    <div class="text">
+      This is some random text! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat mollitia enim sunt sapiente nemo assumenda eius tenetur architecto repellat, minus aut! Unde, ut hic. Pariatur repellat fugit esse explicabo officia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsum quibusdam veritatis consequatur perspiciatis delectus unde vitae, earum suscipit nisi ad veniam amet ipsam! Blanditiis culpa delectus ad cumque iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat mollitia enim sunt sapiente nemo assumenda eius tenetur architecto repellat, minus aut! Unde, ut hic. Pariatur repellat fugit esse explicabo officia! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+
+    <!-- Embed the iframe for another page -->
+    <div class="iframe-container">
+      <iframe src="board.html" width="100%" height="100%" frameborder="0">
+        Your browser does not support iframes.
+      </iframe>
+    </div>
+
+    <a href="board.html" class="clickbutton">Click here to see the Dashboard</a>
   </div>
 </body>
 </html>
