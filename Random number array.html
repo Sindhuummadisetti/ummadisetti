@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Random Number Generator</title>
+    <script>
+        function generateRandomNumber() {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            let randomNumber = Math.floor(Math.random() * (b - a + 1)) + a;
+            const colors = ["#FF5733", "#33FF57", "#3357FF", "#F3F4F6", "#D76D77"];
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            let resultElement = document.getElementById("result");
+            resultElement.innerText = "Random number is: " + randomNumber;
+            resultElement.style.color = randomColor;  // Change the color of the number
+        }
+    </script>
+</head>
+<body>
+    <h1>Generate Random Number</h1>
+    <label for="a">Enter the first integer (a):</label>
+    <input type="number" id="a">
+    <br><br>
+    <label for="b">Enter the second integer (b):</label>
+    <input type="number" id="b">
+    <br><br>
+    <button onclick="generateRandomNumber()">Generate Random Number</button>
+    <p id="result"></p>
+</body>
+</html>
+
