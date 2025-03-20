@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grade Calculator</h1>
+    <input type="number" id="score" placeholder="Enter your score" oninput="calculateGrade()">
+    <p id="result"></p>
+
+    <script>
+        function calculateGrade() {
+            let score = document.getElementById('score').value;
+            let grade = '';
+
+            if (score >= 80) {
+                grade = 'A';
+            } else if (score >= 60) {
+                grade = 'B';
+            } else if (score >= 40) {
+                grade = 'C';
+            } else {
+                grade = 'F';
+            }
+
+            document.getElementById('result').innerText = score ? 'Your grade is: ' + grade : '';
+        }
+    </script>
+</body>
+</html>
